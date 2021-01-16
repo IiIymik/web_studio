@@ -1,0 +1,36 @@
+.feature {
+  padding-bottom: 0;
+}
+.feature-list {
+  display: flex;
+}
+.feature__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature__bg {
+  background-color: #f5f4fa;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.feature__icon {
+  margin: 25px 100px;
+}
+.feature__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+.feature__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
