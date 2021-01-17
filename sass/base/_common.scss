@@ -1,9 +1,7 @@
 body {
   font-family: var(--main-font);
 }
-ul {
-  text-decoration: none;
-}
+
 a {
   text-decoration: none;
 }
@@ -26,6 +24,7 @@ h6 {
 
 ul,
 ol {
+  text-decoration: none;
   margin: 0;
   padding: 0;
 }
