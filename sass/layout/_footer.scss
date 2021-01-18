@@ -1,9 +1,10 @@
 .footer {
   background-color: #2f303a;
+  text-align: center;
+  padding-top: 60px;
   padding-bottom: 60px;
-  .container {
-    display: flex;
-    justify-content: space-between;
+  &__list {
+    margin-bottom: 60px;
   }
 }
 .footer__item:not(:last-child) {
@@ -32,13 +33,12 @@
     color: var(--accent-color);
   }
 }
-.adress-container {
-  margin-right: 70px;
-}
+// .adress-container {
+//   margin-right: 70px;
+// }
 
 .adress-link__title {
   display: inline-block;
-  margin-top: 72px;
   margin-bottom: 20px;
   font-weight: 900;
   font-size: 14px;
@@ -48,9 +48,11 @@
 
   color: #ffffff;
 }
+
 .adress-link__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 .adress-link__link {
   display: flex;
@@ -75,18 +77,18 @@
   fill: #ffffff;
   transition: fill 250ms var(--timing-fn);
 }
-.adress-link {
-  margin-right: 93px;
-}
+// .adress-link {
+//   margin-right: 93px;
+// }
 .adress-link__item:not(:last-child) {
   margin-right: 10px;
 }
 
 .adress-form__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 72px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  display: inline-block;
   margin-bottom: 20px;
   font-weight: 900;
   font-size: 14px;
@@ -117,16 +119,15 @@
   border-radius: 4px;
   outline: none;
 }
-.adress-form__wrapper {
-  display: flex;
-}
+
 .adress-btn-icon {
   margin-left: 10px;
 }
 .email {
   display: inline-block;
-  width: 358px;
+  width: 450px;
   height: 50px;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -137,4 +138,39 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .thumb {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+    padding: 60px 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .thumb {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer {
+  }
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .adress-link {
+    margin-left: 70px;
+  }
+  .adress-form__wrapper {
+    display: flex;
+  }
+  .adress-subscribe {
+    margin-left: 93px;
+  }
+  .email {
+    width: 358px;
+  }
 }
