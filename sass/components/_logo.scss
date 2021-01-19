@@ -9,7 +9,20 @@
     color: var(--accent-color);
   }
 }
-
+@media screen and (min-width: 768px) {
+  .logo-dark {
+    margin-right: 88px;
+    font-size: 24px;
+    line-height: 1.167;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo-dark {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.192;
+  }
+}
 .logo-light {
   display: block;
   margin-bottom: 20px;
