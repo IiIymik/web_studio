@@ -1,6 +1,7 @@
 .current-nav {
   color: var(--accent-color);
   position: relative;
+
   &::after {
     content: '';
     position: absolute;
