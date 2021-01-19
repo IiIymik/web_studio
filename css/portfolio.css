@@ -64,7 +64,6 @@ img {
 .container {
   width: 100%;
   padding: 0 15px;
-  outline: 2px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -371,101 +370,51 @@ img {
 }
 
 .header {
-  padding-top: 32px;
-  padding-bottom: 26px;
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-.header .container {
+.header .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
 }
 
-.header .logo-dark {
-  margin-right: 93px;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-}
-
-.nav-list__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-list__link {
-  /* position: relative; */
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #212121;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition: color 250ms var(--timing-fn);
-}
-
-.nav-list__link:hover, .nav-list__link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
-.header-contact {
-  margin-left: auto;
-}
-
-.header-contact__mail-logo {
+.menu-button {
   display: inline-flex;
-  margin-right: 10px;
-  fill: #757575;
-  transition: fill 250ms var(--timing-fn);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
-.header-contact__tel-logo {
-  margin-right: 10px;
-  margin-left: 30px;
-  fill: #757575;
-  transition: fill 250ms var(--timing-fn);
+.menu-button .icon-cross {
+  display: none;
 }
 
-.header-contact-tel {
-  margin-left: 50px;
-  margin-right: 0;
+.menu-button.is-open .icon-cross {
+  display: block;
 }
 
-.header-contact__mail,
-.header-contact__tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: #757575;
-  font-style: normal;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition: all 250ms var(--timing-fn);
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
-.header-contact__mail:hover, .header-contact__mail:focus,
-.header-contact__tel:hover,
-.header-contact__tel:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 60px;
+  text-align: center;
+  border-top: 1px solid #ececec;
 }
 
-.header-contact__mail:hover .header-contact__mail-logo,
-.header-contact__mail:hover .header-contact__tel-logo, .header-contact__mail:focus .header-contact__mail-logo,
-.header-contact__mail:focus .header-contact__tel-logo,
-.header-contact__tel:hover .header-contact__mail-logo,
-.header-contact__tel:hover .header-contact__tel-logo,
-.header-contact__tel:focus .header-contact__mail-logo,
-.header-contact__tel:focus .header-contact__tel-logo {
-  fill: var(--accent-color);
+.menu-container.is-open {
+  display: block;
 }
 
 .hero {
@@ -657,7 +606,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__item__img {
+.team__img {
   object-fit: cover;
 }
 
@@ -734,31 +683,39 @@ img {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__list {
-    flex-wrap: wrap;
     display: flex;
-    margin: -15px;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__item {
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__item:not(:last-child) {
-    margin-bottom: 0px;
-    margin-right: 0px;
-  }
   .team__list {
-    display: flex;
     flex-wrap: wrap;
     margin: -15px;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 30px;
+  }
+  .team__list {
+    justify-content: space-between;
+    margin: -15px;
+  }
   .team__item {
-    flex-basis: calc((100% - 4 * 20px) / 4);
-    margin: 15px;
+    width: 270px;
   }
 }
 
@@ -969,14 +926,13 @@ img {
     justify-content: space-between;
   }
   .footer {
-    padding: 60px 80px;
+    padding: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .thumb {
-    display: flex;
-    justify-content: space-between;
+  .footer {
+    text-align: start;
   }
   .footer .container {
     display: flex;

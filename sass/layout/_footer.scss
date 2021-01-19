@@ -146,16 +146,13 @@
     justify-content: space-between;
   }
   .footer {
-    padding: 60px 80px;
+    padding: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .thumb {
-    display: flex;
-    justify-content: space-between;
-  }
   .footer {
+    text-align: start;
   }
   .footer .container {
     display: flex;
