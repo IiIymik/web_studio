@@ -2,6 +2,10 @@ body {
   font-family: var(--main-font);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
