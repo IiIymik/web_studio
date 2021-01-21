@@ -704,7 +704,7 @@ img {
 
 .hero {
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 480px 400px;
@@ -734,7 +734,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero_tablet-1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero_tablet-1x.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 768px 400px;
@@ -749,7 +749,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero_desk-1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero_desk-1x.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 1600px 600px;
@@ -941,6 +941,10 @@ img {
 .social-list__item:hover .social-list__icon,
 .social-list__item:focus .social-list__icon {
   fill: #ffffff;
+}
+
+.social-list__link:focus {
+  background-color: var(--accent-color);
 }
 
 .social-list {
