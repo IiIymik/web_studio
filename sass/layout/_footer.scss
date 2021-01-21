@@ -149,10 +149,15 @@
     padding: 60px;
   }
 }
-
+@media screen and (max-width: 1199px) {
+}
 @media screen and (min-width: 1200px) {
   .footer {
     text-align: start;
+    padding: 60px 0;
+    &__list {
+      margin-bottom: 0;
+    }
   }
   .footer .container {
     display: flex;

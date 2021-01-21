@@ -1,7 +1,7 @@
 .radio-btn {
   align-items: center;
   padding: 6px 22px;
-  min-width: 128px;
+  // min-width: 128px;
   height: 38px;
 
   font-family: var(--main-font);
@@ -29,12 +29,39 @@
   }
   &__list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
   }
+
   &__item:not(:last-child) {
     margin-right: 8px;
   }
   &__item {
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px) {
+  .radio-btn__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+  .radio-btn__list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .radio-btn__list {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .radio-btn__list {
+    margin-bottom: 50px;
+    justify-content: center;
   }
 }
