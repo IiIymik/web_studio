@@ -55,7 +55,9 @@
     fill: #ffffff;
   }
 }
-
+.social-list__link:focus {
+  background-color: var(--accent-color);
+}
 .social-list {
   display: flex;
   justify-content: center;
