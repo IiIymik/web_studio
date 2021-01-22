@@ -50,21 +50,22 @@
 .social-list__icon {
   fill: #afb1b8;
   transition: fill 250ms var(--timing-fn);
-  .social-list__item:hover &,
-  .social-list__item:focus & {
+  .social-list__link:hover &,
+  .social-list__link:focus & {
     fill: #ffffff;
   }
 }
-.social-list__link:focus {
-  background-color: var(--accent-color);
-}
+// .social-list__link:hover,
+// .social-list__link:focus {
+//   background-color: var(--accent-color);
+// }
 .social-list {
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 50%;
-  &__item {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,6 +76,7 @@
     &:hover,
     &:focus {
       background-color: var(--accent-color);
+      fill: var(--accent-color);
     }
     &:not(:last-child) {
       margin-right: 10px;
@@ -117,7 +119,7 @@
   //   }
   // }
   .team__title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   .team__list {
     justify-content: space-between;

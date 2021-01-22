@@ -53,7 +53,11 @@
   .feature__item:not(:last-child) {
     margin-right: 30px;
   }
+
   .feature__item {
     width: 270px;
+  }
+  .feature.section {
+    padding-bottom: 0;
   }
 }

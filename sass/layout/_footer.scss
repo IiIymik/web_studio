@@ -149,9 +149,11 @@
     padding: 60px;
   }
 }
-@media screen and (max-width: 1199px) {
-}
+
 @media screen and (min-width: 1200px) {
+  .thumb {
+    align-items: baseline;
+  }
   .footer {
     text-align: start;
     padding: 60px 0;
@@ -162,6 +164,7 @@
   .footer .container {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   .adress-link {
     margin-left: 70px;
